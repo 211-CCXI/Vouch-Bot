@@ -1,4 +1,3 @@
-
 # Bot de Vouch Discord
 
 Ce bot Discord permet à vos clients de laisser des évaluations (vouches) après un achat sur votre serveur. Les évaluations comprennent :
