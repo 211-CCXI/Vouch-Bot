@@ -11,7 +11,8 @@ Ce bot Discord permet à vos clients de laisser des évaluations (vouches) aprè
 1. Assurez-vous d'avoir Node.js installé sur votre système (version 16.9.0 ou supérieure recommandée)
 2. Clonez ou téléchargez ce dépôt
 3. Ouvrez un terminal dans le dossier du projet
-4. Installez les dépendances en exécutant :
+4. Créez un dossier nommé "vouches" dans le répertoire principal du projet
+5. Installez les dépendances en exécutant :
    ```
    npm install discord.js
    ```
@@ -43,6 +44,8 @@ Ce bot Discord permet à vos clients de laisser des évaluations (vouches) aprè
    - Utilisez l'URL générée pour inviter le bot sur votre serveur
 
 ## Démarrage du bot
+
+**Important** : Avant de démarrer le bot pour la première fois, assurez-vous d'avoir créé le dossier `vouches` dans le même répertoire que les fichiers index.js et config.js. Bien que le code tente de créer ce dossier automatiquement, il est recommandé de le créer manuellement pour éviter tout problème.
 
 ```
 node index.js
@@ -97,8 +100,8 @@ En cas de suppression accidentelle d'un salon ou pour recréer des évaluations,
 
 - `index.js` - Fichier principal du bot
 - `config.js` - Configuration du bot
-- `vouches/` - Dossier contenant les évaluations sauvegardées
-- `vouchCounter.json` - Fichier contenant le compteur pour la numérotation des vouches
+- `vouches/` - Dossier contenant les évaluations sauvegardées (doit être créé manuellement)
+- `vouchCounter.json` - Fichier contenant le compteur pour la numérotation des vouches (créé automatiquement)
 
 ## Personnalisation
 
@@ -111,6 +114,15 @@ Vous pouvez personnaliser de nombreux aspects du bot en modifiant le fichier `co
 - Options pour les preuves (taille maximale, délai d'attente, etc.)
 
 ## Troubleshooting
+
+### Problème de dossier manquant
+
+Si vous obtenez une erreur comme `Error: ENOENT: no such file or directory './vouches/...'` :
+1. Arrêtez le bot
+2. Créez manuellement un dossier nommé `vouches` dans le répertoire principal du projet
+3. Redémarrez le bot
+
+### Problèmes avec les images
 
 Si vous rencontrez des problèmes avec l'affichage des images lors de la restauration des vouches, voici quelques solutions possibles :
 
